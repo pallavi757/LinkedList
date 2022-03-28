@@ -12,9 +12,16 @@ namespace DataStructure
             linkedlist.AddNodeInbetween(30);
             Node last_node = new Node(56);
             linkedlist.AddNode(last_node);
+            Console.WriteLine("\nSepecific Node is Added");
             linkedlist.AddSpecificNode(40, 2);
             linkedlist.Display();
-            Console.WriteLine("\nSepecific Node is Added");
+           
+
+            Node head = null;
+            Console.WriteLine("\nSpecific Node is deleted");
+            linkedlist.DeleteSpecificNode(head, 2);
+            linkedlist.Display();
+           
         }
     }
 }

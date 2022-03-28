@@ -135,6 +135,20 @@ namespace DataStructure
             temp.next = prev.next;
             prev.next = temp;
         }
+        public void DeleteSpecificNode(Node head, int Pos)
+        {
+            if (Pos == 0)
+            {
+                head = head.next;
+            }
+
+            Node temp = Head;
+            for (int i = 0; i < Pos - 1; i++)
+            {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+        }
         public void Display()
            {
             Node temp = Head;
