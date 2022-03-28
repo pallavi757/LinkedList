@@ -118,6 +118,23 @@ namespace DataStructure
             }
             return false;
         }
+        public void AddSpecificNode(int Data, int Pos)
+        {
+            Node temp = new Node(Data);
+            if (Pos == 0)
+            {
+                temp.next = Head;
+                Head = temp;
+            }
+
+            Node prev = Head;
+            for (int i = 0; i < Pos - 1; i++)
+            {
+                prev = prev.next;
+            }
+            temp.next = prev.next;
+            prev.next = temp;
+        }
         public void Display()
            {
             Node temp = Head;
