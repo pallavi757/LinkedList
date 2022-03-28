@@ -45,9 +45,23 @@ namespace DataStructure
                 Tail = node;
             }
         }
-
-        public void Display()
+        public void AddNodeInbetween(int data)
         {
+
+            Node node = new Node(data);
+            if (Head == null)
+            {
+                Head = node;
+                Tail = node;
+            }
+            else
+            {
+                node.next = Head;
+                Head = node;
+            }
+        }
+           public void Display()
+           {
             Node temp = Head;
             if (temp == null)
             {
