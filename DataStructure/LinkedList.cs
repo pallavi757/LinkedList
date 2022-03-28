@@ -21,13 +21,31 @@ namespace DataStructure
             {
                 Head = node;
                 Tail = node;
+                
             }
+            
             else
             {
                 node.next = Head;
                 Head = node;
+            }         
+        }
+
+        public void AppendNode(int data)
+        {
+            Node node = new Node(data);
+            if (Head == null)
+            {
+                Head = node;
+                Tail = node;
+            }
+            else
+            {
+                Tail.next = node;
+                Tail = node;
             }
         }
+
         public void Display()
         {
             Node temp = Head;
