@@ -7,21 +7,19 @@ namespace DataStructure
         public static void Main(string[] args)
         {
             LinkedList linkedlist = new LinkedList();
-            Node first_node = new Node(70);
-            linkedlist.AddNode(first_node);
-            linkedlist.AddNodeInbetween(30);
-            Node last_node = new Node(56);
-            linkedlist.AddNode(last_node);
-            Console.WriteLine("\nSepecific Node is Added");
-            linkedlist.AddSpecificNode(40, 2);
-            linkedlist.Display();
-           
+           // LinkedList linkedlist = new LinkedList();
+            Node node_1 = new Node(56);
+            Node node_2 = new Node(30);
+            Node node_3 = new Node(40);
+            Node node_4 = new Node(70);
 
-            Node head = null;
-            Console.WriteLine("\nSpecific Node is deleted");
-            linkedlist.DeleteSpecificNode(head, 2);
+            linkedlist.Add(56);
+            linkedlist.Add(30);
+            linkedlist.Add(40);
+            linkedlist.Add(70);
             linkedlist.Display();
-           
+            Console.WriteLine("\nThe node is in ascending order");
+
         }
     }
 }

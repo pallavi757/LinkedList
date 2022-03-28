@@ -149,6 +149,25 @@ namespace DataStructure
             }
             temp.next = temp.next.next;
         }
+        public void Add(int data)
+        {
+            Node node = new Node(data);
+            Node current = Head, previous = null;
+            while (current != null && current.data < node.data)
+            {
+                previous = current;
+                current = current.next;
+            }
+            if (previous == null)
+            {
+                Head = node;
+            }
+            else
+            {
+                previous.next = node;
+            }
+            node.next = current;
+        }
         public void Display()
            {
             Node temp = Head;
