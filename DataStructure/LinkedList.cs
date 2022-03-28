@@ -104,7 +104,21 @@ namespace DataStructure
                 }
             }
         }
-            public void Display()
+        public bool search(int data)
+        {
+            Node temp = this.Head;
+            while (temp != null)
+            {
+                if (temp.data == data)
+                {
+                    return true;
+                }
+                temp = temp.next;
+
+            }
+            return false;
+        }
+        public void Display()
            {
             Node temp = Head;
             if (temp == null)
