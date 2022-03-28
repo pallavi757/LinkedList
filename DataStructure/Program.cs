@@ -13,7 +13,10 @@ namespace DataStructure
             Node last_node = new Node(56);
             linkedlist.AddNode(last_node);
             Console.WriteLine("Deleting first node");
-            linkedlist.DeleteFirstNode();
+           // linkedlist.DeleteFirstNode();
+           // linkedlist.Display();
+            Console.WriteLine("\n Deleting last node");
+            linkedlist.DeleteLastNode();
             linkedlist.Display();
         }
     }

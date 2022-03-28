@@ -71,7 +71,40 @@ namespace DataStructure
             this.Head = this.Head.next;
             Console.WriteLine("Remove node is:" + temp.data);
         }
-        public void Display()
+
+        public void DeleteLastNode()
+        {
+            if (this.Head == null)
+            {
+                Console.WriteLine("Empty Linked List");
+                return;
+            }
+            else
+            {
+                Node temp = this.Head;
+                Node find = null;
+                // Find second last node
+                while (temp.next != null)
+                {
+                    find = temp;
+                    temp = temp.next;
+                }
+                if (find == null)
+                {
+                    // Delete head node of linked list
+                    this.Head = null;
+                    this.Tail = null;
+                }
+                else
+                {
+                    // Set new last node
+                    this.Tail = find;
+                    find.next = null;
+                    Console.WriteLine("Remove node is:" + temp.data);
+                }
+            }
+        }
+            public void Display()
            {
             Node temp = Head;
             if (temp == null)
