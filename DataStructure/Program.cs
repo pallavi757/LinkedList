@@ -12,6 +12,8 @@ namespace DataStructure
             linkedlist.AddNodeInbetween(30);
             Node last_node = new Node(56);
             linkedlist.AddNode(last_node);
+            Console.WriteLine("Deleting first node");
+            linkedlist.DeleteFirstNode();
             linkedlist.Display();
         }
     }

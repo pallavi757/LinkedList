@@ -60,7 +60,18 @@ namespace DataStructure
                 Head = node;
             }
         }
-           public void Display()
+        public void DeleteFirstNode()
+        {
+            if (this.Head == null)
+            {
+                Console.WriteLine("Nothing to delete");
+            }
+
+            Node temp = this.Head;
+            this.Head = this.Head.next;
+            Console.WriteLine("Remove node is:" + temp.data);
+        }
+        public void Display()
            {
             Node temp = Head;
             if (temp == null)
@@ -69,7 +80,7 @@ namespace DataStructure
             }
             else
             {
-                Console.WriteLine("Linked List as follws");
+                Console.WriteLine("Linked List as follows");
             }
             while (temp != null)
             {
